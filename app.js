@@ -15,11 +15,11 @@ app.use('/',routes);
 app.get('/wishlist', function (req, res) {
 
   var data =[
-    'january',
+  'january',
   'february',
   'march',
-    'april'
-    ];
+  'april'
+  ];
 
   res.render('wishlist', { records: data });
 });
