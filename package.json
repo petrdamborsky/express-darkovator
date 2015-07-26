@@ -13,6 +13,10 @@
     "url": "git@github.com:petrdamborsky/express-darkovator.git"
   },
   "dependencies": {
+    "angular": "^1.4.3",
+    "angular-animate": "^1.4.3",
+    "angular-aria": "^1.4.3",
+    "angular-material": "^0.10.0",
     "express": "^4.13.1",
     "jade": "^1.11.0"
   }

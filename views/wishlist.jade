@@ -1,9 +1,19 @@
-﻿doctype
-html
-head
-  title!= title
-body
-  h1!= message
-  ul
-    each val in records
-      li= val
+﻿extends ./layout.jade
+
+block head
+  title Darkovator - Wishlist
+
+block body
+  md-content(ng-controller="WishlistController as vm")
+    md-toolbar.md-primary
+      .md-toolbar-tools
+        h2.md-flex Wishlist items
+    md-list
+      md-subheader.md-no-sticky
+        | Subheader text
+      md-list-item.md-3-line(ng-repeat="wish in vm.wishlist")
+        .md-list-item-text
+          h3
+            strong {{wish}}
+          h4 lorem ipsum
+          p dolor sit amet

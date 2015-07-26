@@ -8,20 +8,24 @@ app.set('views', './views');
 
 // configure public folder
 app.use(express.static('public'));
+app.use('/node_modules', express.static('node_modules'));
 
 // configure routes
 app.use('/',routes);
 
 app.get('/wishlist', function (req, res) {
 
-  var data =[
-  'january',
-  'february',
-  'march',
-  'april'
-  ];
+  var data = {
+    title: 'Wishlist',
+    records:[
+      'january',
+      'february',
+      'march',
+      'april'
+    ]
+  };
 
-  res.render('wishlist', { records: data });
+  res.render('wishlist', data);
 });
 
 var server = app.listen(3000, function(){
